@@ -1,6 +1,6 @@
 module wrap_2(
 input [3:0]SW,
-
+//оболочка ко второму заданию
 output [6:0]HEX0,
 output [6:0]HEX1
 );

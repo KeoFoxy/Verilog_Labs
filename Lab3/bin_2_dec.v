@@ -1,5 +1,6 @@
 module bin_2_dec(sw, hex0, hex1, hex2, hex3); 
-
+//первый файл
+//отвечает за первый разряд числа
 input [3:0] sw;
 
 output reg [6:0] hex0;

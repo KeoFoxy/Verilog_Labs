@@ -1,5 +1,6 @@
 module bin_to_dec_2 (sw, hex1, y);
-
+//второй файл
+//добавляем десятые части
 input [3:0]sw;
 
 output [6:0]hex1;
