@@ -1,43 +1,31 @@
 module lab_3_3_1 (sw, ledg);
 input [7:0] sw;
-output reg [7:0] ledg;
+output [7:0] ledg;
 
+wire [7:0] dozens = sw[7:4];
+wire [3:0] ones = sw[3:0];
 
+reg [7:0] temp;
 
 always @*
 begin
 case (sw[7:4])
-    0:ledg= 0+sw[3:0];
-    1:ledg=10+sw[3:0];
-    2:ledg=20+sw[3:0];
-    3:ledg=30+sw[3:0];
-    4:ledg=40+sw[3:0];
-    5:ledg=50+sw[3:0];
-    6:ledg=60+sw[3:0];
-    7:ledg=70+sw[3:0];
-    8:ledg=80+sw[3:0];
-    9:ledg=90+sw[3:0];
+    0:temp = 7'b0000000;
+    1:temp = 7'b0001010;
+    2:temp = 7'b0010100;
+    3:temp = 7'b0011110;
+    4:temp = 7'b0101000;
+    5:temp = 7'b0110010;
+    6:temp = 7'b0111100;
+    7:temp = 7'b1000110;
+    8:temp = 7'b1010000;
+    9:temp = 7'b1011010;
 endcase
-end                                                           
+end       
 
-endmodule  
+assign ledg = temp + ones;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+endmodule 
 
 //сначала забираем десятку у числа
 //Смотрим какое число формируют свичи в битках
