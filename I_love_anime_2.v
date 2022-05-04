@@ -7,14 +7,14 @@ input SW,
 output reg [9:0] ledr
 );
 
-initial ledr = 10'b0; 
+initial ledr = 10'b1111111111; 
 
 always@(posedge clk)
 begin
 
 if(reset)
 begin
-ledr<=10'b0;
+ledr<=10'b1;
 end
 else
 begin
