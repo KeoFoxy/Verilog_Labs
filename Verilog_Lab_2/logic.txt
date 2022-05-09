@@ -1,0 +1,15 @@
+Описание работы логики.
+
+If Key0 pressed - > dispay (HKEY0)
+else (nothing)
+
+If Key1 pressed - > dispay (HKEY1)
+else (nothing)
+
+If Key2 pressed - > dispay (HKEY2)
+else (nothing)
+
+If Key3 pressed - > dispay (HKEY3)
+else (nothing)
+
+If SW9 pressed - > display (All)
