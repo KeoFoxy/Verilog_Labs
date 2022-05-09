@@ -1,0 +1,101 @@
+Вентиль И
+
+module and_gate(
+    input x,
+    input y,
+    output result);
+
+    assign result = x & y;
+
+    endmodule
+
+Вентиль ИЛИ
+
+module or_gate(
+    input x,
+    input y,
+    output result);
+
+    assign result = x | y;
+
+    endmodule
+
+Вентиль XOR
+
+module xor_gate(
+    input x,
+    input y,
+    output result);
+
+    assign result = x ^ y;
+
+    endmodule
+
+Вентиль NO
+
+module no_gate(
+    input x,
+    output result);
+
+    assign result = ~x;
+
+    endmodule
+
+
+Пример шины
+
+module or_bus(
+    input [7:0] x,
+    input [7:0] y,
+    output [7:0] result);
+
+    assign result = x | y;
+
+    endmodule
+
+
+module or_bus(
+    input [7:0] x,
+    output [4:0] a,
+    output b,
+    output [2:0] c);
+
+    assign a = x[6:2];
+    assign b = x[5] | x[7];
+    assign c = x[7:5] ^ x[2:0];
+
+    endmodule
+
+
+
+F(x0, x1, x2, x3, y, z) = (x0 + y) xor z * x2 * (x3 + NOx3)
+
+Чтобы сдать матан, должны сойтись зведы и быть везучим
+
+
+Ответы на контрольные вопросы к лабе:
+
+1. Строки содержащие input & output;
+2. За структуру модуля отвечают строки содержащие module и endmodule:
+3. 
+И 
+0 0 -> 0
+0 1 -> 0
+1 0 -> 0
+1 1 -> 1
+
+ИЛИ
+0 0 -> 0
+0 1 -> 1
+1 0 -> 1
+1 1 -> 1
+
+XOR
+0 0 -> 0
+0 1 -> 1
+1 0 -> 1
+1 1 -> 0
+
+NO
+0 -> 1 
+1 -> 0
