@@ -21,6 +21,7 @@ initial ones = 0;
 initial tens = 0;
 initial hundreds = 0;
 initial thousands = 0;
+initial ledr = 10'b0000000000;
 
 always@(posedge clk)
 begin
@@ -41,19 +42,18 @@ begin
 	
 	if(hundreds == 10)
 		begin
-			ledr [9:0] = 10'b1111111111;
 			thousands = thousands + 1;
 			hundreds = 0;
 		end
 	else
 		begin
 			hundreds = hundreds;
-			ledr [9:0] = 10'b0000000000;
 		end
 		
 	if(thousands == 6)
 		begin
 			min = min +1;
+			ledr<={ledr[8:0], 1'b1}
 			thousands = 0;
 			if(min == 11) min = 0;
 		else min = min;
@@ -68,6 +68,7 @@ begin
 			hundreds = 0;
 			thousands = 0;
 			min = 0;
+			ledr[9:0] = 10'b0000000000;
 		end
 	end
 	
