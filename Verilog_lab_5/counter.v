@@ -40,34 +40,3 @@ begin
 		end
 	end
 endmodule
-
-
-/*
-if (reset) 
-	begin
-	pulse_counter <= 0; //асинхронный сброс
-	l<=1;
-	end
-
-	else begin
-		if (device_running) begin
-			if (hundredth_of_second_passed) 
-				begin
-					pulse_counter <= 0; //синхронный сброс
-					l<=0;
-				end
-			else 
-				begin 
-					pulse_counter <= pulse_counter + 1;
-					l<=l+1;
-				end
-			end else
-			begin
-				pulse_counter <= pulse_counter;
-				l<=l; 
-			end
-		end
-	end
-endmodule 
-
-*/
