@@ -46,7 +46,7 @@ begin
   state00 :
       begin 
 		  if (x==1'b1) currentState=state001;
-		     else currentState=stale00;
+		     else currentState=state00;
 		end
   state001 :
       begin 
